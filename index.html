@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #111; 
+  }
+  
+  .profile-pic {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle at center, #161b22 0%, #0d1117 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    font-family: "Fira Code", monospace;
+    position: relative;
+    box-shadow: 0 0 0 4px #0d1117, 0 0 0 6px #21262d; 
+    box-sizing: border-box;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .code-block {
+    font-size: 72px; 
+    font-weight: 600; 
+    line-height: 1.1; 
+    text-align: center;
+    margin-bottom: 45px; 
+    z-index: 2;
+  }
+
+  .name-line {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .accent-text {
+    color: #33C7FF; 
+    font-family: "Fira Code", monospace; 
+    font-weight: 500; 
+    text-shadow: 0 0 25px rgba(51, 199, 255, 0.4); 
+    position: relative;
+    top: 1.5px;
+    font-size:65px;
+  }
+
+  .ghost {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .primary-text {
+    color: #f0f6fc; 
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1); 
+    letter-spacing: 1px; 
+    font-family: "IBM Plex Mono", monospace;
+  }
+
+  .status-lights {
+    display: flex;
+    justify-content: center; 
+    gap: 16px; 
+    z-index: 2;
+  }
+
+  .light {
+    width: 50px;       
+    height: 16px;      
+    border-radius: 20px; 
+    opacity: 0.65;
+    position: relative; 
+  }
+
+  .light::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 10%;
+      width: 80%;
+      height: 2px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0));
+      border-radius: 20px;
+  }
+
+  .color-1 { 
+      background-color: #ff6b6b; 
+      box-shadow: 0 0 20px rgba(255, 107, 107, 0.4); 
+  }
+  
+  .color-2 { 
+      background-color: #69db7c; 
+      box-shadow: 0 0 20px rgba(105, 219, 124, 0.4); 
+  }
+  
+  .color-3 { 
+      background-color: #339af0; 
+      box-shadow: 0 0 20px rgba(51, 154, 240, 0.4); 
+  }
+
+</style>
+</head>
+<body>
+
+<div class="profile-pic">
+  <div class="code-block">
+    <div class="name-line">
+        <span class="accent-text">{</span>
+        <span class="primary-text">Jayan</span>
+        <span class="accent-text ghost">{</span>
+    </div>
+    
+    <div class="name-line">
+        <span class="accent-text ghost">{</span>
+        <span class="primary-text">Patel</span>
+        <span class="accent-text">}</span>
+    </div>
+  </div>
+  
+  <div class="status-lights">
+    <div class="light color-1"></div>
+    <div class="light color-2"></div>
+    <div class="light color-3"></div>
+  </div>
+</div>
+
+</body>
+</html>
