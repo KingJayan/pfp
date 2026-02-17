@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>KingJayan/pfp</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 
 <style>
   body {
@@ -14,120 +14,109 @@
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: #111; 
+    background: #0d1117; 
+    font-family: 'JetBrains Mono', monospace;
   }
   
-  .profile-pic {
+  .profile-badge {
+    position: relative;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle at center, #161b22 0%, #0d1117 70%);
+    border-radius: 50%; 
+    background: #0d1117; 
+    box-shadow: 
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+      0 20px 40px -10px rgba(0, 0, 0, 0.8);
+      
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end; 
     align-items: center;
-    border-radius: 50%; 
-    font-family: "Fira Code", monospace;
-    position: relative;
-    box-shadow: 0 0 0 4px #0d1117, 0 0 0 6px #21262d; 
+    
     box-sizing: border-box;
-    padding: 20px;
+    padding-bottom: 85px; 
     overflow: hidden;
   }
 
-  .code-block {
-    font-size: 72px; 
-    font-weight: 600; 
-    line-height: 1.1; 
-    text-align: center;
-    margin-bottom: 45px; 
-    z-index: 2;
-  }
-
-  .name-line {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .accent-text {
-    color: #33C7FF; 
-    font-family: "Fira Code", monospace; 
-    font-weight: 500; 
-    text-shadow: 0 0 25px rgba(51, 199, 255, 0.4); 
-    position: relative;
-    top: 1.5px;
-    font-size:65px;
-  }
-
-  .ghost {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  .primary-text {
-    color: #f0f6fc; 
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1); 
-    letter-spacing: 1px; 
-    font-family: "IBM Plex Mono", monospace;
-  }
-
-  .status-lights {
+  .cli {
     display: flex;
-    justify-content: center; 
-    gap: 16px; 
+    align-items: center;
+    margin-bottom: 18px; 
     z-index: 2;
   }
 
-  .light {
-    width: 50px;       
-    height: 16px;      
-    border-radius: 6px; 
-    opacity: 1;
-    position: relative; 
+  .prompt-char {
+    color: #3b82f6; 
+    font-size: 24px;
+    opacity: 0.8;
+    margin-right: 15px;
+    transform: translateY(1px);
   }
 
-  .color-1 { 
-      background-color: hsl(0, 100%, 62%); 
-      box-shadow: 0 0 20px rgba(255, 107, 107, 0.4); 
+  .name-text {
+    font-size: 30px; 
+    font-weight: 500;
+    color: #e6edf3; 
+    letter-spacing: -0.5px;
+    text-transform: lowercase; 
+    line-height: 1;
   }
-  
-  .color-2 { 
-      background-color: hsl(125, 59%, 57%); 
-      box-shadow: 0 0 20px rgba(105, 219, 124, 0.4); 
+
+  .cursor {
+
+    width: 0.72em; 
+    height: 1.65rem;
+    background-color: #e6edf3;
+    opacity: 0.65;
+    margin-left: 2.3px;
+    padding-bottom: 4px;
   }
-  
-  .color-3 { 
-      background-color: hsl(227, 97%, 55%); 
-      box-shadow: 0 0 20px rgba(51, 154, 240, 0.4); 
+
+  .status-row {
+    display: flex;
+    gap: 8px;
+    opacity: 0.8;
+  }
+
+  .micro-dot {
+    width: 8px;       
+    height: 8px;      
+    border-radius: 25%;
+  }
+
+  .r { background-color: #ef4444; }
+  .g { background-color: #22c55e; }
+  .b { background-color: #3b82f6; }
+
+  .profile-badge::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.3; 
+    pointer-events: none;
+    border-radius: 50%;
   }
 
 </style>
 </head>
 <body>
 
-<div class="profile-pic">
-  <div class="code-block">
-    <div class="name-line">
-        <span class="accent-text">{</span>
-        <span class="primary-text">Jayan</span>
-        <span class="accent-text ghost">{</span>
-    </div>
-    
-    <div class="name-line">
-        <span class="accent-text ghost">{</span>
-        <span class="primary-text">Patel</span>
-        <span class="accent-text">}</span>
-    </div>
+<div class="profile-badge">
+  
+  <div class="cli">
+    <span class="prompt-char">&gt;</span>
+    <span class="name-text">jayan_patel</span>
+    <div class="cursor"></div>
   </div>
   
-  <div class="status-lights">
-    <div class="light color-1"></div>
-    <div class="light color-2"></div>
-    <div class="light color-3"></div>
+  <div class="status-row">
+    <div class="micro-dot r"></div>
+    <div class="micro-dot g"></div>
+    <div class="micro-dot b"></div>
   </div>
+
 </div>
 
 </body>
 </html>
-
